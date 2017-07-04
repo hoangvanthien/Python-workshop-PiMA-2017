@@ -1,0 +1,762 @@
+
+
+
+
+    
+    \subsection{Các kiểu dữ liệu}\label{cuxe1c-kiux1ec3u-dux1eef-liux1ec7u}
+
+    \subsubsection{Số nguyên}\label{sux1ed1-nguyuxean}
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{n}{x} \PY{o}{=} \PY{l+m+mi}{20}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{type}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<class 'int'>
+
+    \end{Verbatim}
+
+    \subsubsection{Số thực}\label{sux1ed1-thux1ef1c}
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{x} \PY{o}{=} \PY{l+m+mf}{17.0}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{type}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<class 'float'>
+
+    \end{Verbatim}
+
+    \subsubsection{Số phức}\label{sux1ed1-phux1ee9c}
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{n}{x} \PY{o}{=} \PY{l+m+mi}{20} \PY{o}{+} \PY{l+m+mi}{17}\PY{n}{j}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{type}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{o}{.}\PY{n}{real}\PY{p}{,} \PY{n}{x}\PY{o}{.}\PY{n}{imag}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<class 'complex'>
+(20+17j)
+20.0 17.0
+
+    \end{Verbatim}
+
+    \subsubsection{Logic}\label{logic}
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{x} \PY{o}{=} \PY{k+kc}{True}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{type}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<class 'bool'>
+
+    \end{Verbatim}
+
+    \subsubsection{Chuỗi}\label{chuux1ed7i}
+
+    Chuỗi là cấu trúc lưu dữ liệu dạng văn bản (như tin nhắn chẳng hạn). Một
+chuỗi có thể được gói giữa hai ký tự nháy kép (\texttt{"string"}) hoặc
+nháy đơn (\texttt{\textquotesingle{}string\textquotesingle{}}). Khi sử
+dụng nháy kép thì bên trong chuỗi có thể viết dấu nháy đơn dễ dàng hơn.
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{x} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{PiMA 2017 }\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{Math Modelling}\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{\PYZdq{}}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{type}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<class 'str'>
+
+    \end{Verbatim}
+
+    \subsubsection{Danh sách}\label{danh-suxe1ch}
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{x} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{]}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{type}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<class 'list'>
+
+    \end{Verbatim}
+
+    Một danh sách có thể bao gồm danh sách khác (nested list), các phần tử
+của một danh sách có thể thuộc nhiều lớp dữ liệu khác nhau.
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}7}]:} \PY{n}{x} \PY{o}{=} \PY{p}{[}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{]}\PY{p}{]} \PY{c+c1}{\PYZsh{} Ma trận 2x2}
+        \PY{n}{x} \PY{o}{=} \PY{p}{[}\PY{p}{[}\PY{l+m+mf}{1.0}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{l+m+mi}{3} \PY{o}{+} \PY{l+m+mi}{4}\PY{n}{j}\PY{p}{,} \PY{p}{[}\PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{]}\PY{p}{]}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{type}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<class 'list'>
+
+    \end{Verbatim}
+
+    \subsubsection{Từ điển}\label{tux1eeb-ux111iux1ec3n}
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{x} \PY{o}{=} \PY{p}{\PYZob{}}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{P}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Project}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+             \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{i}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{in}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+             \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{M}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Mathematics}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+             \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{A}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Applications}\PY{l+s+s2}{\PYZdq{}}\PY{p}{\PYZcb{}}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{type}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<class 'dict'>
+\{'P': 'Project', 'i': 'in', 'M': 'Mathematics', 'A': 'Applications'\}
+
+    \end{Verbatim}
+
+    \subsubsection{Tuple}\label{tuple}
+
+Trong Python, khi nhóm các giá trị lại với nhau thành cụm sẽ gọi là
+\texttt{tuple}. Ví dụ như mỗi điểm trong không gian Oxyz được biểu diễn
+bằng ba giá trị \((x; y; z)\) có thể được biểu diễn dạng tuple.
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{n}{point} \PY{o}{=} \PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{type}\PY{p}{(}\PY{n}{point}\PY{p}{)}\PY{p}{)}
+        \PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{,} \PY{n}{z} \PY{o}{=} \PY{n}{point} \PY{c+c1}{\PYZsh{} Lấy ra giá trị từ tuple}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{,} \PY{n}{z}\PY{p}{)}
+        \PY{n}{y}\PY{p}{,} \PY{n}{x} \PY{o}{=} \PY{n}{x}\PY{p}{,} \PY{n}{y} \PY{c+c1}{\PYZsh{} Hoán đổi giá trị biến bằng tuple}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<class 'tuple'>
+1 2 3
+2 1
+
+    \end{Verbatim}
+
+    \subsection{Ép kiểu}\label{uxe9p-kiux1ec3u}
+
+    Để ``ép'' một biến sang một kiểu dữ liệu khác có thể làm cú pháp như
+sau:
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}10}]:} \PY{n}{x} \PY{o}{=} \PY{l+m+mi}{17} \PY{c+c1}{\PYZsh{} int}
+         \PY{n}{y} \PY{o}{=} \PY{n+nb}{complex}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{n+nb}{type}\PY{p}{(}\PY{n}{y}\PY{p}{)}\PY{p}{)}
+         \PY{n}{x} \PY{o}{=} \PY{l+m+mf}{5.3} \PY{c+c1}{\PYZsh{} float}
+         \PY{n}{y} \PY{o}{=} \PY{n+nb}{int}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{n+nb}{type}\PY{p}{(}\PY{n}{y}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+(17+0j) <class 'complex'>
+5 <class 'int'>
+
+    \end{Verbatim}
+
+    Tuy nhiên biến kiểu complex không thể chuyển sang float được mà phải
+được lấy riêng phần thực và phần ảo.
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}11}]:} \PY{n}{x} \PY{o}{=} \PY{l+m+mi}{20} \PY{o}{+} \PY{l+m+mi}{17}\PY{n}{j}
+         \PY{n}{a} \PY{o}{=} \PY{n+nb}{float}\PY{p}{(}\PY{n}{x}\PY{o}{.}\PY{n}{real}\PY{p}{)}
+         \PY{n}{b} \PY{o}{=} \PY{n+nb}{int}\PY{p}{(}\PY{n}{x}\PY{o}{.}\PY{n}{imag}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{a}\PY{p}{,} \PY{n}{b}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+20.0 17
+
+    \end{Verbatim}
+
+    Biến kiểu string và hàm \texttt{range(begin,\ end,\ step)} có thể được
+ép sang kiểu list.
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}12}]:} \PY{n}{x} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{PiMA}\PY{l+s+s2}{\PYZdq{}}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{list}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{7}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{list}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{7}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+['P', 'i', 'M', 'A']
+range(1, 7, 2)
+[1, 3, 5]
+
+    \end{Verbatim}
+
+    \subsection{Phép toán}\label{phuxe9p-touxe1n}
+
+    Python hỗ trợ các phép toán \texttt{+,\ -,\ *,\ /} (chia lấy kết quả
+float), \texttt{//} (chia lấy phần nguyên, kết quả int), \texttt{**}
+(lên lũy thừa).
+
+Các phép biến đổi bit: \texttt{\&} (AND), \texttt{\textbar{}} (OR),
+\texttt{\^{}} (XOR).
+
+Đối với biến logic có \texttt{and}, \texttt{or}, \texttt{not}.
+
+Các phép toán so sánh \texttt{\textless{}} (nhỏ hơn),
+\texttt{\textgreater{}} (lớn hơn), \texttt{\textless{}=} (nhỏ hơn hoặc
+bằng), \texttt{\textgreater{}=} (lớn hơn hoặc bằng), \texttt{==} (bằng)
+
+    \subsubsection{Danh sách}\label{danh-suxe1ch}
+
+    Các thao tác cơ bản cho danh sách bao gồm:
+
+    \begin{itemize}
+\tightlist
+\item
+  Thêm phần tử vào cuối list (\texttt{append})
+\end{itemize}
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{x} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Mthemmatic}\PY{l+s+s2}{\PYZdq{}}
+         \PY{n}{x} \PY{o}{=} \PY{n+nb}{list}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+         \PY{n}{x}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{s}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n+nb}{len}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+['M', 't', 'h', 'e', 'm', 'm', 'a', 't', 'i', 'c']
+['M', 't', 'h', 'e', 'm', 'm', 'a', 't', 'i', 'c', 's'] 11
+
+    \end{Verbatim}
+
+    \begin{itemize}
+\tightlist
+\item
+  Truy cập phần tử
+\end{itemize}
+
+Các phần tử trong list có thể được gọi dựa vào chỉ số (index) hay còn
+gọi là thứ tự của nó trong danh sách. Trong một list, phần tử đầu tiên
+có chỉ số là 0.
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}14}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+M
+
+    \end{Verbatim}
+
+    Một list còn có thể được truy cập thông qua một chỉ số âm. Đối với chỉ
+số âm, phần tử cuối cùng trong danh sách được đánh số -1, phần tử liền
+trước có chỉ số nhỏ hơn 1 đơn vị so với phần tử liền sau. Xem ví dụ:
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}15}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+['M', 't', 'h', 'e', 'm', 'm', 'a', 't', 'i', 'c', 's']
+s
+c
+
+    \end{Verbatim}
+
+    \begin{itemize}
+\tightlist
+\item
+  Chèn phần tử vào một vị trí bất kỳ trong list (\texttt{insert})
+\end{itemize}
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{x}\PY{o}{.}\PY{n}{insert}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{a}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+['M', 'a', 't', 'h', 'e', 'm', 'm', 'a', 't', 'i', 'c', 's']
+
+    \end{Verbatim}
+
+    \begin{itemize}
+\tightlist
+\item
+  Xóa phần tử ở một vị trí bất kỳ (\texttt{del})
+\end{itemize}
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}17}]:} \PY{k}{del}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{]}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+['M', 'a', 't', 'h', 'e', 'm', 'a', 't', 'i', 'c', 's']
+
+    \end{Verbatim}
+
+    \begin{itemize}
+\tightlist
+\item
+  Xóa phần tử đầu tiên mang giá trị cho trước (\texttt{remove}).
+\end{itemize}
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}18}]:} \PY{n}{x}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{a}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+['M', 't', 'h', 'e', 'm', 'a', 't', 'i', 'c', 's']
+
+    \end{Verbatim}
+
+    \begin{itemize}
+\tightlist
+\item
+  Sắp xếp theo thứ tự tăng dần (\texttt{sort})
+\end{itemize}
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}19}]:} \PY{n}{x}\PY{o}{.}\PY{n}{sort}\PY{p}{(}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+['M', 'a', 'c', 'e', 'h', 'i', 'm', 's', 't', 't']
+
+    \end{Verbatim}
+
+    \begin{itemize}
+\tightlist
+\item
+  Cắt danh sách (slice) theo cú pháp
+  \texttt{{[}begin\ :\ end\ :\ step{]}}.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{begin} mặc định là 0, \texttt{end} mặc định là độ dài của
+    list, \texttt{step} mặc định là 1.
+  \item
+    Nếu cho \texttt{begin} là số âm thì \texttt{end} mặc định là 0.
+  \item
+    Nếu cho \texttt{end} là số âm thì \texttt{begin} mặc định là
+    \texttt{-len(list)}.
+  \item
+    Nếu cho \texttt{step} là số âm thì mặc định
+    \texttt{begin\ =\ len(list)-1} và \texttt{end\ =\ 0}.
+  \item
+    \ldots{}
+  \end{itemize}
+\end{itemize}
+
+Các bạn có thể thoải mái khám phá thử nghiệm về trò chơi cắt mảng này.
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}20}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{]}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{5}\PY{p}{]}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{:}\PY{p}{]}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{p}{:}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{:}\PY{p}{]}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+['c', 'e', 'h']
+['M', 'a', 'c', 'e', 'h']
+['i', 'm', 's', 't', 't']
+['t', 't', 's', 'm', 'i', 'h', 'e', 'c', 'a', 'M']
+['s', 't', 't']
+['M', 'a', 'c', 'e', 'h', 'i']
+
+    \end{Verbatim}
+
+    \subsubsection{Chuỗi}\label{chuux1ed7i}
+
+    Chuỗi cũng có thao tác slice giống như list. Ngoài ra chuỗi có các hàm:
+
+    \begin{itemize}
+\tightlist
+\item
+  Thay thế một chuỗi con
+\end{itemize}
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}21}]:} \PY{n}{x} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{PiMA 2xxx}\PY{l+s+s2}{\PYZdq{}}
+         \PY{n}{x}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{xxx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{017}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+         \PY{n}{x} \PY{o}{=} \PY{n}{x}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{xxx}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{017}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+PiMA 2xxx
+PiMA 2017
+
+    \end{Verbatim}
+
+    \begin{itemize}
+\tightlist
+\item
+  Format chuỗi (đưa các dữ liệu khác vào giữa chuỗi theo kiểu C/C++)
+\end{itemize}
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}22}]:} \PY{n}{x} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{PiMA }\PY{l+s+si}{\PYZpc{}d}\PY{l+s+s2}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{p}{(}\PY{l+m+mi}{2017}\PY{p}{)} \PY{c+c1}{\PYZsh{} \PYZpc{}d là số nguyên}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Pi = }\PY{l+s+si}{\PYZpc{}.2f}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+m+mf}{3.1415}\PY{p}{)} \PY{c+c1}{\PYZsh{} Làm tròn 2 chữ số thập phân}
+         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+si}{\PYZob{}0\PYZcb{}}\PY{l+s+s2}{, }\PY{l+s+si}{\PYZob{}1\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Mathematics}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+m+mi}{2017}\PY{p}{)}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Math}\PY{l+s+s2}{\PYZdq{}} \PY{o}{+} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Modelling}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)} \PY{c+c1}{\PYZsh{} Cộng chuỗi bằng phép tính}
+         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Math}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Modelling}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+m+mi}{2017}\PY{p}{)} \PY{c+c1}{\PYZsh{} Tự chèn khoảng cách}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+PiMA 2017
+Pi = \%.2f 3.1415
+Mathematics, 2017
+MathModelling
+Math Modelling 2017
+
+    \end{Verbatim}
+
+    \subsubsection{Từ điển}\label{tux1eeb-ux111iux1ec3n}
+
+    Khi gọi một phần tử trong danh sách ta dùng chỉ số của phần tử (e.g.
+\texttt{x{[}5{]}}). Tương tự trong từ điển, để tìm một giá trị (value)
+ta dùng khóa (key). Quan hệ key-value giống với ánh xạ trong toán học.
+Để thêm một ``định nghĩa'' mới (một bộ key-value mới) ta có thể thoải
+mái ``gán'' (assign) mà không cần qua thao tác nào.
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}23}]:} \PY{n}{x} \PY{o}{=} \PY{p}{\PYZob{}}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{P}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Project}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+              \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{i}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{in}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+              \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{M}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Mathematics}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+              \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{A}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Applications}\PY{l+s+s2}{\PYZdq{}}\PY{p}{\PYZcb{}}
+         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{M stands for}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{x}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{M}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{)}
+         \PY{n}{x}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{2017}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{the year PiMA was held}\PY{l+s+s2}{\PYZdq{}}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+M stands for Mathematics
+ \{'P': 'Project', 'i': 'in', 'M': 'Mathematics', 'A': 'Applications', '2017':
+'the year PiMA was held'\}
+
+    \end{Verbatim}
+
+    \subsection{Vòng lặp và rẽ
+nhánh}\label{vuxf2ng-lux1eb7p-vuxe0-rux1ebd-nhuxe1nh}
+
+\subsubsection{\texorpdfstring{\texttt{for}}{for}}\label{for}
+
+Về cơ bản, câu lệnh lặp \texttt{for} sẽ có cú pháp
+\texttt{for\ \textless{}object\textgreater{}\ in\ \textless{}list-alike\textgreater{}}.
+Trong đó \texttt{list-alike} có thể là hàm \texttt{items} của một dict,
+có thể là hàm \texttt{range}, hoặc một list, hoặc một chuỗi, etc.
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}24}]:} \PY{k}{for} \PY{n}{element} \PY{o+ow}{in} \PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{]}\PY{p}{:}
+             \PY{k}{pass}
+         \PY{k}{for} \PY{n}{key}\PY{p}{,} \PY{n}{value} \PY{o+ow}{in} \PY{n}{x}\PY{o}{.}\PY{n}{items}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+             \PY{n+nb}{print}\PY{p}{(}\PY{n}{key}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{\PYZhy{}\PYZhy{}\PYZgt{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{value}\PY{p}{)}
+         \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}\PY{p}{:}
+             \PY{k}{pass}
+         \PY{k}{for} \PY{n}{character} \PY{o+ow}{in} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{PiMA}\PY{l+s+s2}{\PYZdq{}}\PY{p}{:}
+             \PY{k}{pass}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+P --> Project
+i --> in
+M --> Mathematics
+A --> Applications
+2017 --> the year PiMA was held
+
+    \end{Verbatim}
+
+    Ở trên, không có lỗi xảy ra nghĩa là các vòng lặp viết đúng cú pháp. Tuy
+vậy, để ý rằng tôi có sử dụng lệnh \texttt{pass} để bỏ qua nội dung của
+dòng \texttt{for} (tương tự với \texttt{while}, \texttt{if}, hay bất cứ
+câu lệnh nào đòi hỏi một đoạn chương trình theo sau). \#\#\#
+\texttt{while} Câu lệnh \texttt{while} có cú pháp
+\texttt{while\ \textless{}conditions\textgreater{}:\ \textless{}statements\textgreater{}}.
+Trong đó \texttt{conditions} có thể là một hoặc nhiều điều kiện ghép
+nhau bằng \texttt{and}, \texttt{or}, \texttt{not}. Ví dụ sau liệt kê các
+số chính phương nhỏ hơn 10.
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}25}]:} \PY{n}{i} \PY{o}{=} \PY{l+m+mi}{1}
+         \PY{k}{while} \PY{p}{(}\PY{n}{i}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2} \PY{o}{\PYZlt{}} \PY{l+m+mi}{10}\PY{p}{)}\PY{p}{:}
+             \PY{n+nb}{print}\PY{p}{(}\PY{n}{i}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}
+             \PY{n}{i} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+1
+4
+9
+
+    \end{Verbatim}
+
+    \subsubsection{if}\label{if}
+
+Câu lệnh \texttt{if} có cú pháp như sau:
+
+\begin{verbatim}
+if <conditions>:
+    <statements>
+else:
+    <statements>
+\end{verbatim}
+
+Giả sử sau câu lệnh \texttt{else:} còn phải xét thêm điều kiện khác nữa
+thì có thể thay bằng \texttt{elif\ \textless{}conditions:}.
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}26}]:} \PY{n}{x} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{]}
+         \PY{n}{y} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{]}
+         \PY{k}{if} \PY{n}{x} \PY{o}{\PYZgt{}} \PY{n}{y}\PY{p}{:}
+             \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{bigger}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{elif} \PY{n}{x} \PY{o}{\PYZlt{}} \PY{n}{y}\PY{p}{:}
+             \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{smaller}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{elif} \PY{n}{x} \PY{o}{==} \PY{n}{y}\PY{p}{:}
+             \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{equal}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{else}\PY{p}{:}
+             \PY{k}{pass} \PY{c+c1}{\PYZsh{} ???}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+bigger
+
+    \end{Verbatim}
+
+    \subsection{Hàm (function)}\label{huxe0m-function}
+
+Để khai báo một hàm, dùng cú pháp:
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}27}]:} \PY{k}{def} \PY{n+nf}{f}\PY{p}{(}\PY{n}{param1}\PY{p}{,} \PY{n}{param2}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{)}\PY{p}{:}
+             \PY{k}{return} \PY{n}{param1} \PY{o}{+} \PY{n}{param2} \PY{o}{*} \PY{l+m+mf}{0.5}
+\end{Verbatim}
+    
+
+    Hàm \texttt{f} trên lấy hai tham số, trong đó tham số thứ hai
+(\texttt{param2}) có giá trị mặc định là 0. Lưu ý rằng các tham số có
+giá trị mặc định phải chuyển ra sau cùng trong danh sách tham số.
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}28}]:} \PY{k}{def} \PY{n+nf}{f2}\PY{p}{(}\PY{n}{param1}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{param2}\PY{p}{)}\PY{p}{:}
+             \PY{k}{return} \PY{n}{param1} \PY{o}{+} \PY{n}{param2}\PY{o}{*}\PY{l+m+mf}{0.5}
+\end{Verbatim}
+    
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+
+          File "<ipython-input-28-9ce5ec1e6ed1>", line 1
+        def f2(param1=0, param2):
+              \string^
+    SyntaxError: non-default argument follows default argument
+
+
+    \end{Verbatim}
+
+
+    Các cách sử dụng hàm sau đây là hợp lệ:
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}29}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{p}{(}\PY{n}{param2} \PY{o}{=} \PY{l+m+mi}{3}\PY{p}{,} \PY{n}{param1} \PY{o}{=} \PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+1.0
+2.0
+3.5
+
+    \end{Verbatim}
+
+    Như vậy khi gọi hàm, nếu không ghi rõ tên tham số truyền vào (cách 1, 2)
+thì các giá trị gán lần lượt cho các tham số theo thứ tự khi khai báo
+hàm. Nếu có ghi rõ (cách 3) thì không bắt buộc vị trí khai báo.
+
+\subsubsection{\texorpdfstring{\texttt{lambda}}{lambda}}\label{lambda}
+
+Thay vì khai báo hàm \texttt{f} bằng cách ghi \texttt{def\ f(x):} có thể
+dùng phép gán cho những hàm đơn giản chỉ một dòng \texttt{return}.
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}30}]:} \PY{n}{f} \PY{o}{=} \PY{k}{lambda} \PY{n}{param1}\PY{p}{,} \PY{n}{param2}\PY{o}{=}\PY{l+m+mi}{0}\PY{p}{:} \PY{n}{param1} \PY{o}{+} \PY{n}{param2}\PY{o}{*}\PY{l+m+mf}{0.5}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{p}{(}\PY{n}{param2}\PY{o}{=}\PY{l+m+mi}{3}\PY{p}{,} \PY{n}{param1}\PY{o}{=}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+1.0
+2.0
+3.5
+
+    \end{Verbatim}
+
+    \subsection{\texorpdfstring{Cách tạo nhanh
+\texttt{list}}{Cách tạo nhanh list}}\label{cuxe1ch-tux1ea1o-nhanh-list}
+
+    Một \texttt{list} có thể được tạo nhanh thông qua dòng \texttt{for}.
+Chẳng hạn tôi muốn tạo một danh sách các số tự nhiên nhỏ hơn 10.
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}31}]:} \PY{n}{a} \PY{o}{=} \PY{p}{[}\PY{n}{x} \PY{k}{for} \PY{n}{x} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{]}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{a}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    \end{Verbatim}
+
+    Hoặc có thể được tạo nhanh qua hàm \texttt{lambda}. Chẳng hạn tôi muốn
+tạo danh sách gồm bình phương của các số tự nhiên trong khoảng
+\texttt{{[}4;\ 8{]}}:
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}32}]:} \PY{n}{a} \PY{o}{=} \PY{n+nb}{map}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{,} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{)}\PY{p}{)} \PY{c+c1}{\PYZsh{} trả về con trỏ}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{a}\PY{p}{)} \PY{c+c1}{\PYZsh{} In ra địa chỉ}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{list}\PY{p}{(}\PY{n}{a}\PY{p}{)}\PY{p}{)} \PY{c+c1}{\PYZsh{} Ép kiểu danh sách}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<map object at 0x107eca550>
+[16, 25, 36, 49, 64]
+
+    \end{Verbatim}
+
+    \subsection{\texorpdfstring{\texttt{*} Lớp
+(\texttt{class})}{* Lớp (class)}}\label{lux1edbp-class}
+
+    Class là chức năng quan trọng khiến Python trở thành ngôn ngữ lập trình
+hướng đối tượng. Mỗi biến trong Python dù lớn hay nhỏ (\texttt{int}) đều
+là một đối tượng (object). Trong một đối tượng chứa các thuộc tính
+(attribute) đóng vai trò như biến để cung cấp thêm thông tin về đối
+tượng đó, và các phương pháp (method) đóng vai trò như hàm để thực thi
+một loạt các lệnh xử lý.
+
+Ví dụ khi mô hình hóa xe cứu thương vào lập trình, có thể biến nó thành
+một object với kiểu dữ liệu tên \texttt{Ambulance} được định nghĩa qua
+lớp cùng tên. Xe cứu thương có thể bao gồm các thông số như biển số xe
+(\texttt{string}) và vị trí hiện tại của xe (dựa theo mã tỉnh,
+\texttt{int}). Thao tác có thể đặt bên trong đối tượng này là ``di
+chuyển đến'' để hỗ trợ một xe cứu thương khác.
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}33}]:} \PY{k}{class} \PY{n+nc}{Ambulance}\PY{p}{:}
+             \PY{k}{def} \PY{n+nf}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{plate}\PY{p}{,} \PY{n}{city}\PY{p}{)}\PY{p}{:}
+                 \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{plate} \PY{o}{=} \PY{n}{plate}
+                 \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{city} \PY{o}{=} \PY{n}{city}
+             \PY{k}{def} \PY{n+nf}{assist}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{another\PYZus{}ambulance}\PY{p}{)}\PY{p}{:}
+                 \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{city} \PY{o}{=} \PY{n}{another\PYZus{}ambulance}\PY{o}{.}\PY{n}{city}
+             \PY{k}{def} \PY{n+nf}{\PYZus{}\PYZus{}str\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{return} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Ambulance }\PY{l+s+si}{\PYZob{}0\PYZcb{}}\PY{l+s+s2}{ is in city }\PY{l+s+si}{\PYZob{}1\PYZcb{}}\PY{l+s+s2}{\PYZdq{}}\PYZbs{}
+                         \PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{plate}\PY{p}{,} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{city}\PY{p}{)}
+\end{Verbatim}
+    
+
+    Lưu ý rằng trong mỗi \texttt{class} thường có hàm \texttt{\_\_init\_\_}
+để khởi tạo một đối tượng. Trong ví dụ trên, hàm này có nhận tham số
+\texttt{plate} và gán vào \texttt{self.plate}. Có thể hình dung rằng
+\texttt{self.plate} là một biến \texttt{plate} là một thuộc tính (hay
+biến) thuộc lớp Ambulance, còn tham số \texttt{plate} được truyền vào
+hàm \texttt{\_\_init\_\_} là một biến độc lập chỉ có giá trị trong hàm
+này chứ không thuộc lớp \texttt{Ambulance}. Hàm \texttt{\_\_str\_\_}
+dùng để hướng dẫn cho câu lệnh \texttt{print} nên in ra thông tin gì khi
+người ta cố gắng in đối tượng này ra màn hình.
+
+Mọi hàm trong class đều phải có tham số \texttt{self}. Khi gọi hàm thuộc
+class không truyền giá trị vào tham số này.
+
+    
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}34}]:} \PY{n}{amb1} \PY{o}{=} \PY{n}{Ambulance}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{65\PYZhy{}B1\PYZhy{}2017}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+m+mi}{32}\PY{p}{)}
+         \PY{n}{amb2} \PY{o}{=} \PY{n}{Ambulance}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{50\PYZhy{}B2\PYZhy{}11124}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+m+mi}{14}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{amb1}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{amb2}\PY{p}{)}
+         \PY{n}{amb2}\PY{o}{.}\PY{n}{assist}\PY{p}{(}\PY{n}{amb1}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{amb2}\PY{p}{)}
+\end{Verbatim}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Ambulance 65-B1-2017 is in city 32
+Ambulance 50-B2-11124 is in city 14
+Ambulance 50-B2-11124 is in city 32
+
+    \end{Verbatim}
+

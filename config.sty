@@ -1,0 +1,96 @@
+\RequirePackage[a4paper, top=2cm, bottom=2cm, left=3cm, right=2cm]{geometry}
+\RequirePackage{titlesec}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[utf8]{vietnam}
+\RequirePackage{setspace}
+\RequirePackage{fancyhdr}
+\RequirePackage{tocloft}
+\RequirePackage{color}
+\RequirePackage{titlesec}
+\RequirePackage{epigraph}
+\RequirePackage{xcolor}
+\RequirePackage{adjustbox}
+\RequirePackage{listings}
+% \RequirePackage[
+%     backend=biber,
+%     style=alphabetic,
+%     sorting=ynt
+%     ]{biblatex}
+% \RequirePackage{minted}
+
+% Reformat chapter title
+\titleformat
+	{\chapter}
+	[hang]
+	{\scshape\Huge}
+	{Chương \thechapter.}
+	{0.5em}
+	{}
+
+% Header and Footer
+\fancyhf{}
+\fancyhead[LE,RO]{\scshape PiMA 2017}% Author name
+\fancyhead[RE,LO]{Mathematical Modelling with Python}% Document name
+\fancyfoot[RE,LO]{Thien V. Hoang}
+\fancyfoot[LE,RO]{\thepage}
+
+% Indentation size for boxes containing example code and result
+\newcommand{\boxindent}{2cm}
+
+% Only display Chapter and Section
+\setcounter{tocdepth}{1}
+
+% Flip margin
+\let\tmp\oddsidemargin
+\let\oddsidemargin\evensidemargin
+\let\evensidemargin\tmp
+\reversemarginpar
+
+% Intentionally left blank notification
+\newcommand*{\blankpage}{
+    \vspace*{\fill}
+    {\centering This page was intentionally left blank.\par}
+    \vspace{\fill}}
+\makeatletter
+\renewcommand*{\cleardoublepage}{\clearpage\if@twoside \ifodd\c@page\else
+    \blankpage
+    \thispagestyle{empty}
+    \newpage
+    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother
+
+% Add bibliography file
+% \addbibresource{main.bib}
+
+% Configure minted package
+% \usemintedstyle{borland}
+% \setminted[tex]{frame=lines,
+%     framesep=2mm,
+%     baselinestretch=1.2,
+%     fontsize=\footnotesize,
+%     linenos}
+
+% Short command
+\newcommand{\code}[1]{\texttt{#1}}
+
+% Code linting
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+    language=Java,
+    aboveskip=3mm,
+    belowskip=3mm,
+    showstringspaces=false,
+    columns=flexible,
+    basicstyle={\small\ttfamily},
+    numbers=none,
+    numberstyle=\tiny\color{gray},
+    keywordstyle=\color{blue},
+    commentstyle=\color{dkgreen},
+    stringstyle=\color{mauve},
+    breaklines=true,
+    breakatwhitespace=true,
+    tabsize=3
+}
