@@ -14,7 +14,9 @@
 \begin{document}
 \pagestyle{fancy}
 \maketitle
-\abstract{Python là ngôn ngữ lập trình bậc cao mã nguồn mở có tính phổ biến cực lớn trong giới công nghệ. Trong trại hè Toán học và Ứng dụng PiMA 2017, chúng ta sẽ tìm hiểu về tính ứng dụng của Python trong nghiên cứu các mô hình toán học từ thực tế. Bài viết giới thiệu Python, các thuật ngữ lập trình, một số pacakge hữu ích, và cách sử dụng Jupyter để trình bày một bản báo cáo và phân tích. Các bạn chú ý các thuật ngữ tiếng Anh trong ngoặc đơn có thể được sử dụng nhiều lần trên bài viết. Ngoài ra bài viết cung cấp các thông tin chuyên sâu dành cho những bạn có thích thú tìm hiểu. Tác giả bài viết không sử dụng hệ điều hành Windows, tuy nhiên cách thực hiện sẽ không quá khác biệt. Các mục được đánh dấu sao (*) trong bài là những mục nâng cao, chuyên sâu, phù hợp hơn với những bạn có background về tin học do đó không yêu cầu các bạn nhập môn lập trình tìm hiểu.}
+\abstract{Python là ngôn ngữ lập trình bậc cao mã nguồn mở có tính phổ biến cực lớn trong giới công nghệ. Trong trại hè Toán học và Ứng dụng PiMA 2017, chúng ta sẽ tìm hiểu về tính ứng dụng của Python trong nghiên cứu các mô hình toán học từ thực tế. Bài viết giới thiệu Python, các thuật ngữ lập trình, cách cài đặt Jupyter Notebook, và một số vấn đề sẽ được thảo luận tại trại hè. Các bạn chú ý các thuật ngữ tiếng Anh trong ngoặc đơn có thể được sử dụng nhiều lần trên bài viết. Tác giả bài viết không sử dụng hệ điều hành Windows, tuy nhiên cách thực hiện sẽ không quá khác biệt. Các mục được đánh dấu sao (*) trong bài là những mục nâng cao, chuyên sâu, phù hợp hơn với những bạn có background về tin học do đó không yêu cầu các bạn nhập môn lập trình tìm hiểu.\\
+
+\textbf{Lưu ý quan trọng:} Tài liệu này chỉ giới thiệu nhanh về workshop Python sắp tới tại PiMA. Các bạn sẽ được cung cấp thêm các notebook khác để đọc, nghiên cứu, và thí nghiệm.}
 
 \section{Giới thiệu về lập trình}
 Lập trình có thể được hiểu là ``hướng dẫn'' cho máy tính của bạn làm theo ý bạn thông qua những câu lệnh. Lập trình có thể được dùng cho nhiều mục đích khác nhau, từ việc tạo ra những ứng dụng và trò chơi trên điện thoại cho đến hệ thống xe tự lái, xa hơn nữa là công cụ tính toán và phân tích trong các trung tâm nghiên cứu về vũ trụ như NASA. Tuy vậy, ở một mức độ cơ bản có thể hiểu lập trình là giải quyết những bài toán (problem solving). Bài toán lớn hơn lại có thể được thiết kế thành những bài toán nhỏ và sau đó ghép các kết quả lại với nhau, giống như một \textbf{kỹ sư}. Bài toán cũng có thể được mô hình theo các công thức giống như các \textbf{nhà toán học} thường làm khi nghiên cứu. Và công việc lập trình cũng đòi hỏi tư duy lập ra những giả thuyết, dự đoán, khả năng kiểm tra lời giải, và quan sát tính chất phức tạp của hệ thống máy tính. Điều này khiến bạn trở thành một \textbf{nhà khoa học máy tính}.
@@ -55,18 +57,28 @@ Tuy nhiên, do từng dòng lệnh được dịch trong lúc chương trình đ
     \item \textbf{pip:} Là một package manager giúp bạn cài đặt thêm những package mới theo nhu cầu, thông qua lệnh \texttt{pip install <package>} trên Terminal. Chữ `pip' là viết tắt đệ quy của câu ``Pip install packages'' (Source: Wikipedia).
 \end{itemize}
 \section{Làm sao để sử dụng Python?}
-Trên macOS có cài đặt sẵn Python 2. Trên Ubuntu có cài đặt sẵn Python 2 và Python 3. Để kiểm tra mình có Python trên máy chưa, vào Terminal (hoặc Command Prompt trên Windows) gõ lệnh \texttt{python --version} để xem có báo lỗi hay không.
+Trên macOS có cài đặt sẵn Python 2. Trên Ubuntu có cài đặt sẵn Python 2 và Python 3. Để kiểm tra mình có Python trên máy chưa, vào Terminal (hoặc Command Prompt trên Windows) gõ lệnh \texttt{python --version} để xem có báo lỗi hay không. \textbf{Trong trại hè lần này khuyến khích các bạn dùng Python 3.}
 
 Sau đây là các cách khác nhau để chạy code Python:
 \begin{itemize}
     \item Code trên file: Mở một file bằng editor (e.g. Notepad, Sublime, Atom, etc.) tùy ý và gõ code ở đó. Lưu lại thành một file có đuôi (extension) là \texttt{.py}. Vào Terminal chạy lệnh:\\
     \texttt{\$ python file-name.py}
     \item Chạy từng câu lệnh một trên Terminal: Bằng cách gõ lệnh \texttt{python} trong Terminal, nó sẽ mở ra một process Python. Gõ từng lệnh một và enter sẽ cho ra kết quả.
-    \item \textbf{IPython Notebook:} (recommended) Một môi trường lập trình Python có nền tảng HTML. Trong một notebook, bạn có thể viết code vào các `khối' (cell) code và chạy cell đó một cách trực quan. Các khối khi nhận lệnh chạy sẽ nối đuôi nhau thực thi trong một process Python. Ngoài ra các phép tính toán và tài liệu có thể được trình bày tường minh trong các loại cell khác để bổ sung thông tin cho code. Có hỗ trợ viết bằng \LaTeX\ và export notebook thành file \LaTeX\ để các bạn đưa vào bài nghiên cứu của mình.
+    \item \textbf{Jupyter Notebook:} (recommended) Một môi trường lập trình Python có nền tảng HTML. Trong một notebook, bạn có thể viết code vào các `khối' (cell) code và chạy cell đó một cách trực quan. Các khối khi nhận lệnh chạy sẽ nối đuôi nhau thực thi trong một process Python. Ngoài ra các phép tính toán và tài liệu có thể được trình bày tường minh trong các loại cell khác để bổ sung thông tin cho code. Có hỗ trợ viết bằng \LaTeX\ và export notebook thành file \LaTeX\ để các bạn đưa vào bài nghiên cứu của mình.
 \end{itemize}
-Trong tài liệu này cung cấp cho các bạn các ví dụ minh họa. Lưu ý rằng các ví dụ này là liên tiếp nhau, được đánh dấu bằng \texttt{In [x]:} và toàn bộ phần code được lùi một đoạn vào trong. Cell 2 sẽ được chạy nối tiếp sau khi cell 1 kết thúc. Với mỗi cell có thể có kết quả in ra, kết quả này được lùi ra ngoài so với phần code.
+\subsection*{Hướng dẫn cài đặt Jupyter Notebook}
+Trong Terminal / Command Prompt bạn hãy gõ lần lượt các lệnh sau (phải chờ lệnh trước kết thúc mới tới lệnh sau):
+\begin{verbatim}
+    pip3 install jupyter
+    jupyter notebook
+\end{verbatim}
+Sau đó vào trình duyệt web truy cập địa chỉ \texttt{localhost:8888}, bạn sẽ thấy các thư mục trên máy tính của bạn. Lần lượt tìm đến thư mục chứa notebook (là file có đuôi \texttt{.ipynb}) và mở lên.
+\begin{figure}[htb]
+    \centering
+    \includegraphics{jupyter_nb.png}
 
-Xin lưu ý rằng khi các bạn code Python trên Terminal / Command Prompt (tức là cứ gõ một lệnh rồi enter) thì các bạn không cần dùng hàm \texttt{print(var)} mà chỉ đơn thuần gõ \texttt{var} cũng đủ để hiện ra kết quả. Tuy nhiên, phương pháp chuẩn để hiện kết quả của biến vẫn là cách đầu tiên. Các bạn có thể tùy ý lựa chọn theo trường hợp.
+\end{figure}
+
 \section{Kiến thức căn bản về ngôn ngữ Python}
 Khác với sự gò bó của C++ và Java, chỉ với một cú pháp nhỏ trong Python lại sinh ra rất nhiều phép tính và thao tác đến mức không thể kể hết trong tài liệu này. Tuy nhiên, để giới thiệu các bạn đến với Python, sau đây là những kiến thức không thể thiếu:
 \begin{itemize}
@@ -96,4 +108,20 @@ Các chủ đề được thảo luận:
 \end{itemize}
 \subsection{Vẽ đồ thị}
 Sử dụng thư viện \texttt{matplotlib} để vẽ các dạng đồ thị thông qua dữ liệu hoặc hàm. Định dạng đồ thị, bố trí các đối tượng trên hình ảnh.
+\subsection{\texttt{scipy}}
+\texttt{scipy} là một thư viện được xây dựng trên nền tảng \texttt{numpy}, cung cấp một lượng lớn các chức năng phục vụ tính toán khoa học. Các phần được giới thiệu trong trại hè bao gồm:
+\begin{itemize}
+    \item \texttt{scipy.integrate}: Tích phân và phương trình vi phân
+    \item \texttt{scipy.linalg}: Hệ phương trình tuyến tính và ma trận thưa
+    \item \texttt{scipy.optimize}: Tìm các cực trị của hàm số
+    \item \texttt{scipy.interpolate}: Tìm xu hướng biến động của dữ liệu bị nhiễu
+\end{itemize}
+\subsection{\texttt{sympy}}
+\texttt{sympy} là một thư viện toán học trên Python hỗ trợ từ đại số đến hình học và xa hơn là vật lý, thống kê, mã hóa. Các phần sau đây sẽ được giới thiệu:
+\begin{itemize}
+    \item Tính toán cơ bản
+    \item Biến đổi biểu thức toán học
+    \item Tính đạo hàm, nguyên hàm của hàm số
+    \item Giải phương trình
+\end{itemize}
 \end{document}
